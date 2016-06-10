@@ -4,5 +4,5 @@ run pip install --trusted-host pypi.oneapm.com -i http://pypi.oneapm.com/simple 
 add src/main/python /code
 workdir /code
 env BLUEWARE_CONFIG_FILE blueware.ini
-cmd ["blueware-admin","run-program","python","chengducloud.wuhouapp"] 
+cmd ["blueware-admin","run-program","python","-m","chengducloud.wuhouapp"] 
 
