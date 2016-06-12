@@ -1,8 +1,9 @@
 from python:2.7
 run pip install flask
-run pip install --trusted-host pypi.oneapm.com -i http://pypi.oneapm.com/simple --upgrade blueware
+run pip install newrelic
 add src/main/python /code
+add  newrelic.ini  /code
 workdir /code
-env BLUEWARE_CONFIG_FILE blueware.ini
-cmd ["blueware-admin","run-program","python","-m","chengducloud.wuhouapp"] 
+env NEW_RELIC_CONFIG_FILE newrelic.ini
+cmd ["newrelic-admin","run-program","python","-m","chengducloud.wuhouapp"] 
 
